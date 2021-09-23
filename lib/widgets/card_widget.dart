@@ -12,13 +12,7 @@ class CardWidget extends StatefulWidget {
   final TextInputType keyboardType;
   final int maxLines;
 
-  CardWidget(
-      {@required this.icon,
-      @required this.labelText,
-      @required this.editMode,
-      @required this.controller,
-      this.keyboardType = TextInputType.text,
-      this.maxLines = 1});
+  CardWidget({@required this.icon, @required this.labelText, @required this.editMode, @required this.controller, this.keyboardType = TextInputType.text, this.maxLines = 1});
 
   @override
   _CardWidgetState createState() => _CardWidgetState();
@@ -38,9 +32,10 @@ class _CardWidgetState extends State<CardWidget> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(10),
+          Radius.circular(8),
         ),
       ),
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
